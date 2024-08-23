@@ -19,7 +19,7 @@ import useMenuStore from "@/store/sidebarStore";
 export default function Hero() {
 	const router = useRouter();
 	const [mnemonicString, setMnemonicString] = useState("");
-	const [mnemonics, setMnemonics] = useState([]);
+	const [mnemonics, setMnemonics] = useState<string[]>([]);
 	const [isMnemonicsSaved, setIsMnemonicsSaved] = useState(false);
 
 	const { wallets, walletIndex, addWallet, addMnemonics }: any =

@@ -34,7 +34,7 @@ export default function Header() {
 				),
 				walletIndex,
 			};
-			list.map((m) => {
+			list.map((m: any) => {
 				if (m.label === "Wallets") {
 					m.subItem.push(menu);
 				}

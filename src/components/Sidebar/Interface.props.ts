@@ -1,9 +1,10 @@
 /** @format */
 export interface SubMenu {
-	id: number;
+	id: number | string;
 	label: string;
 	href: string;
 	icon: any;
+	walletIndex?: number;
 }
 export interface Menu {
 	id: number;

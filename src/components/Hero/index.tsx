@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { Spotlight } from "../ui/spotlight";
 import { useRouter } from "next/navigation";
 import { IconWallet } from "@tabler/icons-react";
+// Interface
+import { SubMenu, Menu } from "../Sidebar/Interface.props";
 // Components
 import ModalComp from "../Modal";
 // Helpers
@@ -49,7 +51,7 @@ export default function Hero() {
 			});
 			// Add wallet menu to sidebar
 			const list = menus;
-			const menu = {
+			const menu: SubMenu = {
 				id: `Wallet ${walletIndex + 1}`,
 				label: `Wallet ${walletIndex + 1}`,
 				href: "#",
@@ -58,7 +60,7 @@ export default function Hero() {
 				),
 				walletIndex,
 			};
-			list.map((m) => {
+			list.map((m: Menu) => {
 				if (m.label === "Wallets") {
 					m.subItem.push(menu);
 				}

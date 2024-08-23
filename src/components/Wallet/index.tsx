@@ -127,9 +127,9 @@ export default function WalletDetails() {
 										</h4>
 									</div>
 									<div className="flex flex-row justify-between items-end">
-										<div className="flex flex-col mr-[1rem]">
+										<div className="flex flex-col mr-[2rem] w-full">
 											{/* SOL Public Key */}
-											<div className="relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center w-[20rem]">
+											<div className="relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center">
 												<input
 													disabled
 													className="text-neutral-800 dark:text-neutral-300 md:text-md text-sm bg-transparent w-[90%]"
@@ -150,7 +150,7 @@ export default function WalletDetails() {
 												</button>
 											</div>
 											{/* SOL Private Key */}
-											<div className="relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center w-[20rem]">
+											<div className="w-full relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center">
 												<input
 													disabled
 													className="text-neutral-800 dark:text-neutral-300 md:text-md text-sm bg-transparent w-[90%]"
@@ -183,9 +183,9 @@ export default function WalletDetails() {
 										</h4>
 									</div>
 									<div className="flex flex-row justify-between items-end">
-										<div className="flex flex-col mr-[1rem]">
+										<div className="flex flex-col mr-[2rem] w-full">
 											{/* ETH Public key */}
-											<div className="relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center w-[20rem]">
+											<div className="relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center">
 												<input
 													disabled
 													className="text-neutral-800 dark:text-neutral-300 md:text-md text-sm bg-transparent w-[90%]"
@@ -206,7 +206,7 @@ export default function WalletDetails() {
 												</button>
 											</div>
 											{/* ETH Private Key */}
-											<div className="relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center w-[20rem]">
+											<div className="relative dark:bg-neutral-600 mt-[1rem] p-2 rounded-full flex flex-row items-center">
 												<input
 													disabled
 													className="text-neutral-800 dark:text-neutral-300 md:text-md text-sm bg-transparent w-[90%]"

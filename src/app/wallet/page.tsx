@@ -19,6 +19,7 @@ function Wallet() {
 		setActiveMenu(menu.id);
 	};
 	const handleSubMenu = (menu: any) => {
+		setActiveMenu(1);
 		addSelectedWallet(menu.walletIndex);
 	};
 

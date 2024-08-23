@@ -5,7 +5,7 @@ import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 // Interface
-import { InterfaceProps } from "./Interface.props";
+import { InterfaceProps, Menu, SubMenu } from "./Interface.props";
 // Components
 import Logo from "../Logo";
 // Constants
@@ -24,7 +24,6 @@ const SidebarComp: React.FC<InterfaceProps> = ({
 	const { wallets }: any = useWalletStore();
 
 	useEffect(() => {
-		console.log("wallets", wallets);
 		if (wallets.length === 0) {
 			router.push("/");
 		}
@@ -38,14 +37,14 @@ const SidebarComp: React.FC<InterfaceProps> = ({
 						<Logo />
 					</>
 					<div className="mt-8 flex flex-col gap-2">
-						{menus.map((link, idx) => (
+						{menus.map((link: Menu, idx: number) => (
 							<div className="flex flex-col" key={idx}>
 								<button onClick={() => onClickMenu(link)}>
 									<SidebarLink link={link} />
 								</button>
 								{open &&
 									link.subItem?.length > 0 &&
-									link.subItem?.map((item, index) => (
+									link.subItem.map((item: SubMenu, index: string | number) => (
 										<button key={index} onClick={() => onClickSubMenu(item)}>
 											<SidebarLink link={item} className="ml-[1.5rem]" />
 										</button>

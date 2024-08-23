@@ -15,5 +15,5 @@ export interface Menu {
 }
 export interface InterfaceProps {
 	onClickMenu: (e: Menu) => void;
-	onClickSubMenu: (e: Menu) => void;
+	onClickSubMenu: (e: SubMenu) => void;
 }

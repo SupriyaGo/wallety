@@ -93,6 +93,7 @@ export default function Hero() {
 				</p>
 
 				<ModalComp
+					contentStyle="justify-center"
 					trigghrButton={() => (
 						<button
 							onClick={() => handleWalletCreation()}
@@ -118,7 +119,7 @@ export default function Hero() {
 											disabled
 											type="text"
 											value={e}
-											className="w-[80px] dark:bg-neutral-700 rounded-[10px] border border-neutral-800 text-center dark:text-neutral-300 text-sm"
+											className="dark:bg-neutral-700 rounded-[10px] py-1.5 border border-neutral-800 text-center dark:text-neutral-300 text-sm"
 										/>
 									</div>
 								))}

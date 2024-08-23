@@ -12,14 +12,19 @@ import {
 interface InterfaceProps {
 	trigghrButton: Function;
 	children: any;
+	contentStyle?: string;
 }
 
-const ModalComp: React.FC<InterfaceProps> = ({ trigghrButton, children }) => {
+const ModalComp: React.FC<InterfaceProps> = ({
+	trigghrButton,
+	children,
+	contentStyle,
+}) => {
 	return (
 		<Modal>
 			<ModalTrigger className="">{trigghrButton()}</ModalTrigger>
 			<ModalBody>
-				<ModalContent>{children}</ModalContent>
+				<ModalContent className={contentStyle}>{children}</ModalContent>
 			</ModalBody>
 		</Modal>
 	);

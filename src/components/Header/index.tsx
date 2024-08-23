@@ -2,6 +2,8 @@
 
 import React from "react";
 import { IconCirclePlus, IconWallet } from "@tabler/icons-react";
+// Interface
+import { SubMenu, Menu } from "../Sidebar/Interface.props";
 // Store
 import useWalletStore from "@/store/walletStore";
 import { createETHWallet, createSolanaWallet } from "@/helpers/walletHelpers";
@@ -25,7 +27,7 @@ export default function Header() {
 			});
 			// Add wallet menu to sidebar
 			const list = menus;
-			const menu = {
+			const menu: SubMenu = {
 				id: `Wallet ${walletIndex + 1}`,
 				label: `Wallet ${walletIndex + 1}`,
 				href: "#",
@@ -34,7 +36,7 @@ export default function Header() {
 				),
 				walletIndex,
 			};
-			list.map((m: any) => {
+			list.map((m: Menu) => {
 				if (m.label === "Wallets") {
 					m.subItem.push(menu);
 				}

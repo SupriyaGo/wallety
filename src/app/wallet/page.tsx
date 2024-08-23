@@ -13,7 +13,7 @@ import useWalletStore from "@/store/walletStore";
 function Wallet() {
 	const [activeMenu, setActiveMenu] = useState(0);
 
-	const { addSelectedWallet } = useWalletStore();
+	const { addSelectedWallet }: any = useWalletStore();
 
 	const handleMenu = (menu: any) => {
 		setActiveMenu(menu.id);

@@ -24,7 +24,7 @@ export default function WalletDetails() {
 	const [isSolPubKeyCopied, setIsSolPubKeyCopied] = useState(false);
 	const [showETHPvtKey, setshowETHPvtKey] = useState(false);
 	const [isETHPubKeyCopied, setIsETHPubKeyCopied] = useState(false);
-	const [walletDetails, setSalletDetails] = useState({});
+	const [walletDetails, setSalletDetails] = useState<any>({});
 	const [isCopied, setIsCopied] = useState(false);
 
 	const { wallets, walletIndex, addWallet, selectedWallet }: any =
@@ -38,7 +38,7 @@ export default function WalletDetails() {
 		setSalletDetails(wallets[selectedWallet]);
 	}, [selectedWallet]);
 
-	const handleCopy = async (text, type) => {
+	const handleCopy = async (text: string, type: string) => {
 		try {
 			await navigator.clipboard.writeText(text);
 			if (type == "sol") {
@@ -63,7 +63,7 @@ export default function WalletDetails() {
 						<div className="flex flex-row items-end justify-between">
 							<div>
 								<p className="text-neutral-800 dark:text-neutral-300 lg:text-lg md:text-md text-sm">
-									{walletDetails.name} Assets
+									{walletDetails?.name} Assets
 								</p>
 								<p className="text-neutral-900 dark:text-neutral-100 text-bold lg:text-[4.5rem] md:text-[3rem] text-[2rem]">
 									$0.00{" "}
